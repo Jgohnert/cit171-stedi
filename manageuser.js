@@ -1,12 +1,12 @@
 //© 2021 Sean Murdock
 
-let userName = "";
+let phonenumber = "";
 let password = "";
 let verifypassword = "";
 let passwordRegEx=/((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%!]).{6,40})/;
 
-function setusername(){
-    userName = $("#username").val();
+function setphonenumber(){
+    phonenumber = $("#phonenumber").val();
 }
 
 function setuserpassword(){
@@ -48,7 +48,7 @@ function checkexpiredtoken(token){
 
 function userlogin(){
     setuserpassword();
-    setusername();
+    setphonenumber();
     $.ajax({
         type: 'POST',
         url: 'https://dev.stedi.me/login',
